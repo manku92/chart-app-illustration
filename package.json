@@ -1,0 +1,15 @@
+{
+  "name": "chart_app_illustration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w scss/main.scss:dist/css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.56.1"
+  }
+}

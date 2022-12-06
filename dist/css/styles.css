@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-family: 16px;
+  position: relative;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  line-height: 1.5;
+  display: grid;
+  place-content: center;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.rectangle-left {
+  position: absolute;
+  width: 280px;
+  height: 500px;
+  left: 0;
+  top: 0;
+  background: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
+  border-radius: 0 0 250px 250px;
+}
+
+.rectangle-right {
+  position: absolute;
+  content: "";
+  width: 280px;
+  height: 560px;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(225deg, rgba(233, 68, 255, 0.1764705882) 0%, rgba(136, 57, 255, 0.2666666667) 100%);
+  opacity: 0.3;
+  border-radius: 250px 250px 0 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+main > * {
+  position: relative;
+  z-index: 2;
+}
+
+.chat-preview {
+  margin: auto;
+  width: 15.5rem;
+  padding: 0.5rem;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 30px;
+  position: relative;
+}
+
+.hull {
+  position: absolute;
+  content: "";
+  width: 120px;
+  height: 20px;
+  background-color: hsl(0deg, 0%, 100%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 3%;
+  border-radius: 0 0 20px 20px;
+}
+
+.user {
+  background: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  color: hsl(0deg, 0%, 100%);
+  padding: 2rem 0.8rem 0.5rem;
+  border-radius: 30px 30px 5px 5px;
+}
+.user i {
+  color: hsl(0deg, 0%, 100%);
+}
+.user img {
+  width: 16%;
+  border-radius: 50%;
+  border: 2px solid hsl(0deg, 0%, 100%);
+}
+.user .name-avail h3 {
+  font-size: 0.7rem;
+}
+.user .name-avail p {
+  font-size: 0.5rem;
+}
+.user .three-dot {
+  margin-left: 3.5rem;
+}
+.user .three-dot .dot {
+  width: 3px;
+  height: 3px;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  margin-bottom: 2px;
+}
+
+.messages {
+  background-color: hsl(270deg, 20%, 96%);
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 30px 30px;
+}
+
+.left-side-message {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.left-side-message p {
+  font-size: 0.5rem;
+  color: hsl(276deg, 55%, 52%);
+  background-color: hsla(268deg, 7%, 64%, 0.171);
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 150px;
+}
+.left-side-message ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.5rem;
+  background: linear-gradient(225deg, #8739FF 0%, #E844FF 100%);
+  width: 150px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: hsl(0deg, 0%, 100%);
+}
+.left-side-message .choice {
+  width: 15px;
+  height: 15px;
+  border: 1px solid hsl(289deg, 100%, 72%);
+  border-radius: 50%;
+}
+.left-side-message .highlight {
+  font-weight: 500;
+}
+
+form {
+  margin: 0.5rem 0 0;
+}
+form ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 0.5rem;
+  border-radius: 30px;
+}
+form input[type=text] {
+  font-size: 0.6rem;
+  border: none;
+  text-align: center;
+  color: hsl(206deg, 6%, 79%);
+  font-weight: 400;
+}
+form i {
+  background-color: hsl(271deg, 36%, 24%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-size: 0.6rem;
+}
+
+.right-side-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+  margin: 0.7rem 0;
+}
+.right-side-message .lucky-dog {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.right-side-message .lucky-dog img {
+  width: 20%;
+  border-radius: 8px;
+}
+.right-side-message p {
+  font-size: 0.5rem;
+  width: 150px;
+  padding: 0.5rem;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 10px;
+}
+.right-side-message .short-message {
+  text-align: right;
+  width: 100px;
+}
+
+.simple-booking {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.simple-booking h1 {
+  color: hsl(271deg, 36%, 24%);
+}
+.simple-booking p {
+  color: hsl(270deg, 7%, 64%);
+  padding-right: 15rem;
+}
+
+@media (max-width: 1024px) {
+  .rectangle-left {
+    height: 400px;
+    left: -85px;
+  }
+  .rectangle-right {
+    height: 400px;
+    right: -85px;
+  }
+  .simple-booking p {
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 428px) {
+  .rectangle-left {
+    height: 350px;
+  }
+  .rectangle-right {
+    height: 350px;
+  }
+  main {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  .simple-booking p {
+    padding: 0.8rem 1rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

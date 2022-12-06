@@ -1,0 +1,42 @@
+@media (max-width: 1024px){
+
+  .rectangle-left{
+    height: 400px;
+    left: -85px;
+  }
+  .rectangle-right{
+    height: 400px;
+    right: -85px;
+  }
+ 
+  .simple-booking{
+    p{
+      padding-right: 2rem;
+    }
+  }
+
+}
+@media (max-width: 428px){
+ 
+  .rectangle-left{
+    height: 350px;
+  }
+
+  .rectangle-right{
+    height: 350px;
+  }
+
+  main{
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem ;
+  }
+  .simple-booking{
+    p{
+      padding: 0.8rem 1rem;
+    }
+  }
+
+}
